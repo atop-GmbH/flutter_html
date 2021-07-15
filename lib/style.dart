@@ -174,7 +174,9 @@ class Style {
   Border border;
   Alignment alignment;
   String markerContent;
-
+  int maxLines;
+  TextOverflow overflow;
+  
   Style({
     this.backgroundColor = Colors.transparent,
     this.color,
@@ -186,6 +188,8 @@ class Style {
     this.fontStyle,
     this.fontWeight,
     this.height,
+    this.overflow,
+    this.maxLines,
     this.lineHeight,
     this.letterSpacing,
     this.listStyleType,
@@ -256,6 +260,8 @@ class Style {
       fontWeight: other.fontWeight,
       height: other.height,
       lineHeight: other.lineHeight,
+      maxLines: other.maxLines,
+      overflow: other.overflow,
       letterSpacing: other.letterSpacing,
       listStyleType: other.listStyleType,
       listStylePosition: other.listStylePosition,
@@ -316,6 +322,8 @@ class Style {
     FontWeight fontWeight,
     double height,
     double lineHeight,
+    int maxLines,
+    TextOverflow overflow,
     double letterSpacing,
     ListStyleType listStyleType,
     ListStylePosition listStylePosition,
@@ -349,6 +357,8 @@ class Style {
       fontWeight: fontWeight ?? this.fontWeight,
       height: height ?? this.height,
       lineHeight: lineHeight ?? this.lineHeight,
+      maxLines: maxLines ?? this.maxLines,
+      overflow: overflow ?? this.overflow,
       letterSpacing: letterSpacing ?? this.letterSpacing,
       listStyleType: listStyleType ?? this.listStyleType,
       listStylePosition: listStylePosition ?? this.listStylePosition,
@@ -447,3 +457,4 @@ enum WhiteSpace {
   NORMAL,
   PRE,
 }
+

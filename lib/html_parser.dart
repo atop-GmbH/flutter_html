@@ -757,6 +757,8 @@ class StyledText extends StatelessWidget {
               : null,
       child: Text.rich(
         textSpan,
+        maxLines: style.maxLines,
+        overflow: style.overflow,
         style: style.generateTextStyle(),
         textAlign: style.textAlign,
         textDirection: style.direction,
@@ -765,3 +767,4 @@ class StyledText extends StatelessWidget {
     );
   }
 }
+
